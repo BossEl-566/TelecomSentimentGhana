@@ -1,4 +1,5 @@
 # Command to get comment data from Youtube and put it in data form
+## You run it on colab or any notebook of your choice
  
 
 !pip install google-api-python-client pandas tqdm --quiet
