@@ -5,7 +5,7 @@ This project analyses YouTube comments related to Vodafone Ghana using NLP techn
 ## Structure
 - `data/` – raw and cleaned datasets
 - `notebooks/` – Colab notebooks for each phase
-- `src/` – scripts (optional)
+- `src/` – scripts 
 - `reports/` – final project write-up
 
 ## Getting Started
