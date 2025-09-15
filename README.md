@@ -59,5 +59,4 @@ https://www.youtube.com/watch?v=1KOIMJIU1s4
 3. Provide your YouTube API key in the config cell.
 4. Run the cells to download data, train models, and generate results.
 
-## 📜 License
-MIT (or your preferred license)
+
