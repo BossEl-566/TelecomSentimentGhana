@@ -1,9 +1,16 @@
-# TelecomSentimentGhana
+# Telecom Sentiment Analysis – Vodafone Ghana
 
-This project analyses **YouTube comments about Ghanaian telecom providers (MTN, Vodafone, AirtelTigo, etc.)** to understand public sentiment (positive, negative, neutral).  
-It is part of the **Computational Models for Social Media Mining** end-of-semester project.
+This project analyses YouTube comments related to Vodafone Ghana using NLP techniques.
 
-## 📂 Project Structure
+## Structure
+- `data/` – raw and cleaned datasets
+- `notebooks/` – Colab notebooks for each phase
+- `src/` – scripts (optional)
+- `reports/` – final project write-up
+
+## Getting Started
+Open notebooks/01_data_collection.ipynb in Google Colab, set your API key and video IDs, then run cells to collect comments.
+
 
 ## Link to youtube videos for data collection
 https://www.youtube.com/watch?v=a35pZ1rPXKM
