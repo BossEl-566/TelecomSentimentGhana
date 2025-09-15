@@ -1,0 +1,51 @@
+11014393 
+DCIT 316 
+COMPUTATIONAL MODELS FOR SOCIAL MEDIA MINING
+
+Sentiment Analysis of Vodafone/Telecel Ghana YouTube Comments Using NLP
+Abstract
+This project applies Natural Language Processing (NLP) techniques to analyse customer sentiment in YouTube comments on Vodafone Ghana videos. We collected 943 comments from 25 videos using the YouTube API, preprocessed and labelled them automatically with VADER sentiment analysis, and built two models: a baseline TF-IDF + Logistic Regression classifier and an improved version with oversampling to handle class imbalance. The improved model achieved an accuracy of 71 % with notably better recall for the negative class. These results show that even simple NLP methods can provide actionable insights into public perception of Vodafone Ghana’s services. The findings can guide customer-experience improvements and inform policy or marketing decisions.
+
+1. Introduction
+Telecom providers in Ghana receive constant feedback through social media. Analysing these comments can reveal public sentiment about products, network quality, or customer service.
+Goal: classify Vodafone Ghana YouTube comments as positive, neutral, or negative.
+
+2. Data Collection
+•	Source: YouTube Data API v3.
+•	Scope: 943 comments scraped from 25 official Vodafone Ghana videos.
+•	Storage: comments saved as data/telecom_comments.csv inside the project folder.
+•	Tools: Google Colab notebook using the YouTube API key and Python libraries (google-api-python-client, pandas, tqdm).
+
+3. Data Processing & Labelling
+•	Cleaned text: removed duplicates, emojis, punctuation, and irrelevant characters.
+•	Labelled each comment automatically with VADER sentiment analysis as positive, neutral, or negative.
+•	Balanced the dataset by oversampling the minority classes to improve model training.
+
+4. Methodology
+•	Baseline model: TF-IDF vectorizer + Logistic Regression classifier trained on the original imbalanced dataset.
+•	Improved model: same classifier but trained on oversampled data (using imblearn) to handle class imbalance.
+•	Train/test split: 80 % training, 20 % testing.
+•	Libraries: Python, scikit-learn, pandas, imbalanced-learn.
+
+5. Results
+Model	Accuracy	Neg F1	Neu F1	Pos F1
+Baseline	71 %	0.21	0.74	0.77
+Improved	71 %	0.51	0.74	0.76
+•	Negative-class recall improved from 0.12 to 0.52, capturing far more dissatisfied comments.
+•	Positive and neutral class performance remained stable.
+Confusion matrices confirmed the improvement in correctly identifying negative comments.
+
+6. Discussion
+The improved model better identifies negative comments, which are often the most useful for customer-service teams. The main limitation is dataset size (943 comments) and reliance on automatic VADER labels, which may misclassify sarcasm or mixed opinions. Future work could:
+•	Apply transformer-based models (BERT, DistilBERT) for higher accuracy.
+•	Collect more comments from other telecom providers (MTN, AirtelTigo) for comparative analysis.
+•	Combine sentiment results with topic modelling to see why people are negative or positive.
+
+7. Conclusion
+Analysing social-media comments can provide quick insights into customer sentiment about Vodafone Ghana. Even a basic model yields actionable results and shows the potential for more advanced NLP approaches to support decision-making in Ghana’s telecom sector.
+
+8. References
+•	Google Developers: YouTube Data API v3
+•	Scikit-learn documentation
+•	Hutto, C. & Gilbert, E. (2014). VADER: A Parsimonious Rule-based Model for Sentiment Analysis of Social Media Text.
+
